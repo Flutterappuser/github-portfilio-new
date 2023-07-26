@@ -79,15 +79,15 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("skills.json")
-        :
-        response = await fetch("./projects/projects.json")
-    const data = await response.json();
-    return data;
-}
+// async function fetchData(type = "skills") {
+//     let response
+//     type === "skills" ?
+//         response = await fetch("skills.json")
+//         :
+//         response = await fetch("./projects/projects.json")
+//     const data = await response.json();
+//     return data;
+// }
 
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
@@ -146,13 +146,13 @@ function showProjects(projects) {
 
 }
 
-fetchData().then(data => {
-    showSkills(data);
-});
+// fetchData().then(data => {
+//     showSkills(data);
+// });
 
-fetchData("projects").then(data => {
-    showProjects(data);
-});
+// fetchData("projects").then(data => {
+//     showProjects(data);
+// });
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
@@ -172,23 +172,23 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // pre loader end
 
 // disable developer mode
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
+// document.onkeydown = function (e) {
+//     if (e.keyCode == 123) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//         return false;
+//     }
+// }
 
 // Start of Tawk.to Live Chat
 // var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
